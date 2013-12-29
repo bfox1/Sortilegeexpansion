@@ -8,6 +8,11 @@ public class Names {
 		//Items
 	//public static final String Verbal_unlocalizedName = "Verbal";
 	//public static final String Verbal_name = "Verbal";
+	
+		//Blocks
+	
+	public static final String Newchest_unlocalizedName = "NewChest";
+	public static final String Newchest_name = "New Chest";
 
 
 }
