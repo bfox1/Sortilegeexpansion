@@ -6,6 +6,9 @@ package Sortilegeexpansion.lib.config;
  * 
  */
 public class ids {
+
+	public static int newchest_acutal;
+	public static final int newchest_default = 3000;
 	/**
 	 * Ids for Items range from 16000 - 36000 Ids for Blocks range from 0 - 4000
 	 * Verbalhoe has the highest Item id of 16010 12/21 {Update these if new IDS have been added}

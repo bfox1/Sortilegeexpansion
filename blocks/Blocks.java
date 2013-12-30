@@ -1,6 +1,8 @@
 package Sortilegeexpansion.blocks;
 
 import Sortilegeexpansion.Sortilegeexpansion;
+import Sortilegeexpansion.lib.config.Names;
+import Sortilegeexpansion.lib.config.ids;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -21,6 +23,9 @@ public class Blocks {
 
 		//Basic blocks
 	public static Block verbalblock;
+	
+		//Special containers
+	public static Block blockcontainer;
 
 	
 	public static void init() {
@@ -28,6 +33,11 @@ public class Blocks {
 			//Basic block registration
 		//verbalblock = new Verbalblock(ids.verbalblock_actual);
 		//GameRegistry.registerBlock(verbalblock, Names.Verbalblock_name);
+		
+		//Special containers
+		blockcontainer = new NewChest(ids.newchest_acutal);
+		GameRegistry.registerBlock(blockcontainer, Names.Newchest_name);
+		GameRegistry.registerTileEntity(chesttiny.class, "Containernewchest");
 		
 
 		

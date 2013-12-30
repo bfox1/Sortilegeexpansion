@@ -19,6 +19,8 @@ public class ConfigHandler {
 		// BlocksConfig
 		ids.verbalblock_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.Verbalblock_name, ids.verbalblock_defualt).getInt();
+		
+
 
 
 		// ItemsConfig
@@ -30,6 +32,9 @@ public class ConfigHandler {
 		ids.omnitool_actual = config.getItem(config.CATEGORY_ITEM,
 				Names.Omnitool_name, ids.omnitool_default).getInt() - 256;
 */
+		
+		ids.newchest_acutal = config.getBlock(config.CATEGORY_BLOCK,
+				Names.Newchest_name, ids.newchest_default).getInt();
 		config.save();
 
 	}

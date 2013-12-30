@@ -9,6 +9,7 @@ import Sortilegeexpansion.oregen.Worldgenore;
 import Sortilegeexpansion.proxies.CommonProxy;
 import Sortilegeexpansion.items.Items;
 import Sortilegeexpansion.blocks.Blocks;
+import Sortilegeexpansion.blocks.GuiHandler;
 import Sortilegeexpansion.lib.LogHelper;
 import Sortilegeexpansion.lib.ModInfo;
 import Sortilegeexpansion.lib.Sortilegeexpansiontab;
@@ -16,11 +17,13 @@ import Sortilegeexpansion.lib.config.ConfigHandler;
 import Sortilegeexpansion.lib.config.Recipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -33,6 +36,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION)
 @NetworkMod(channels = { ModInfo.CHANNEL }, clientSideRequired = true, serverSideRequired = true)
 public class Sortilegeexpansion {
+	
+	@Instance(ModInfo.ID)
+	public static Sortilegeexpansion instance = new Sortilegeexpansion();
+	
+	public static GuiHandler guihandler = new GuiHandler();
 
 	@SidedProxy(clientSide = ModInfo.PROXY_LOCATION + ".ClientProxy", serverSide = ModInfo.PROXY_LOCATION
 			+ ".CommonProxy")
@@ -59,6 +67,7 @@ public class Sortilegeexpansion {
 		proxy.initSounds();
 		LogHelper.log(Level.INFO, "Preparing Blocks, Items, Recipes");
 		// Loads items details BEFORE statup.
+		//NetworkRegistry.instance().registerGuiHandler(ModInfo.ID, guihandler);
 		Items.init();
 		Blocks.init();
 		Recipes.init();
@@ -87,6 +96,7 @@ public class Sortilegeexpansion {
 		LogHelper.log(Level.INFO, "Names of Items, Blocks added");
 		//Oregeneration.regWorld();
 		GameRegistry.registerWorldGenerator(new Worldgenore());
+		NetworkRegistry.instance().registerGuiHandler(ModInfo.ID, new GuiHandler());
 
 
 
