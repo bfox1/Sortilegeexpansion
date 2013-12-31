@@ -9,6 +9,7 @@ import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class ContainerDecayer extends Container
@@ -115,7 +116,7 @@ public class ContainerDecayer extends Container
 			}
 			else if (par2 != 1 && par2 != 0)
 			{
-				if (OreRecipes.ore().smelting().getSmeltingResult(itemstack1) != null)
+				if (FurnaceRecipes.smelting().getSmeltingResult(itemstack1) != null)
 				{
 					if (!this.mergeItemStack(itemstack1, 0, 1, false))
 					{

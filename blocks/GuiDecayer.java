@@ -42,10 +42,10 @@ public class GuiDecayer extends GuiContainer{
 
 		if(this.decayer.hasPower()){
 			i1 = this.decayer.getPowerRemainingScaled(45);
-			this.drawTexturedModalRect(guiLeft + 8, guiTop + 53 - i1, 176, 62 - i1, 16, i1);
+			this.drawTexturedModalRect(guiLeft + 8, guiTop + 53 - i1, 176, 63 - i1, 16, i1);
 		}
 		
-		i1 = this.decayer.getCookProgressScaled(24);
-		this.drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 0, i1 + 1, 16);
+		i1 = this.decayer.getCookProgressScaled(20);
+		this.drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 0, i1 + 1, 18);
 	}
 }
