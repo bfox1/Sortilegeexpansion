@@ -35,6 +35,12 @@ public class ConfigHandler {
 		
 		ids.newchest_acutal = config.getBlock(config.CATEGORY_BLOCK,
 				Names.Newchest_name, ids.newchest_default).getInt();
+		
+		ids.blockDecayerActive_actual = config.getBlock(config.CATEGORY_BLOCK,
+				Names.blockDecayerActive_name, ids.blockDecayerActive_default).getInt();
+		
+		ids.blockDecayerIdle_actual = config.getBlock(config.CATEGORY_BLOCK,
+				Names.blockDecayerIdle_name, ids.blockDecayerIdle_default).getInt();
 		config.save();
 
 	}

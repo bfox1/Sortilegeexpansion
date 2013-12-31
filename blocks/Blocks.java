@@ -26,6 +26,10 @@ public class Blocks {
 	
 		//Special containers
 	public static Block blockcontainer;
+	
+		//Decayer
+	public static Block blockDecayerIdle;
+	public static Block blockDecayerActive;
 
 	
 	public static void init() {
@@ -39,6 +43,14 @@ public class Blocks {
 		GameRegistry.registerBlock(blockcontainer, Names.Newchest_name);
 		GameRegistry.registerTileEntity(chesttiny.class, "Containernewchest");
 		
+		//decayer
+		blockDecayerIdle = new BlockDecayer(ids.blockDecayerIdle_actual, false).setUnlocalizedName(Names.blockDecayerIdle_name).setHardness(3.7F).setCreativeTab(Sortilegeexpansion.sortilegeexpansion);
+		blockDecayerActive = new BlockDecayer(ids.blockDecayerActive_actual, true).setUnlocalizedName(Names.blockDecayerActive_name).setHardness(3.7F).setLightValue(0.9F);
+		GameRegistry.registerBlock(blockDecayerIdle, Names.blockDecayerIdle_name);
+		GameRegistry.registerBlock(blockDecayerActive, Names.blockDecayerActive_name);
+		GameRegistry.registerTileEntity(TileEntityDecayer.class, "Decayer");
+		LanguageRegistry.instance().addStringLocalization("container.decayer", "Decayer");
+		
 
 		
 	}
@@ -46,6 +58,8 @@ public class Blocks {
 	public static void addNames() {
 			//Basic block Name registration
 		//LanguageRegistry.addName((Block given name), ("Name of block"));
+		LanguageRegistry.addName(blockDecayerIdle, Names.blockDecayerActive_name);
+		LanguageRegistry.addName(blockDecayerIdle, Names.blockDecayerIdle_name);
 
 	}
 	

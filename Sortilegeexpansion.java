@@ -10,6 +10,7 @@ import Sortilegeexpansion.proxies.CommonProxy;
 import Sortilegeexpansion.items.Items;
 import Sortilegeexpansion.blocks.Blocks;
 import Sortilegeexpansion.blocks.GuiHandler;
+import Sortilegeexpansion.blocks.GuiHandlerdecayer;
 import Sortilegeexpansion.lib.LogHelper;
 import Sortilegeexpansion.lib.ModInfo;
 import Sortilegeexpansion.lib.Sortilegeexpansiontab;
@@ -37,10 +38,18 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(channels = { ModInfo.CHANNEL }, clientSideRequired = true, serverSideRequired = true)
 public class Sortilegeexpansion {
 	
+		//For guis
 	@Instance(ModInfo.ID)
 	public static Sortilegeexpansion instance = new Sortilegeexpansion();
 	
 	public static GuiHandler guihandler = new GuiHandler();
+	
+	public static GuiHandlerdecayer guihandlerdecayer = new GuiHandlerdecayer();
+	
+	public static final int guiIdDecayer = 8;
+	
+	//@Instance(ModInfo.ID)
+	//public static Sortilegeexpansion instance1 = new Sortilegeexpansions();
 
 	@SidedProxy(clientSide = ModInfo.PROXY_LOCATION + ".ClientProxy", serverSide = ModInfo.PROXY_LOCATION
 			+ ".CommonProxy")
@@ -97,6 +106,7 @@ public class Sortilegeexpansion {
 		//Oregeneration.regWorld();
 		GameRegistry.registerWorldGenerator(new Worldgenore());
 		NetworkRegistry.instance().registerGuiHandler(ModInfo.ID, new GuiHandler());
+		NetworkRegistry.instance().registerGuiHandler(ModInfo.ID, new GuiHandlerdecayer());
 
 
 
