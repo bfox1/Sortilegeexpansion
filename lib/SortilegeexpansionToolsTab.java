@@ -1,4 +1,4 @@
-package Sortilegeexpansion;
+package Sortilegeexpansion.lib;
 
 import Sortilegeexpansion.items.Items;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,11 +13,11 @@ public class SortilegeexpansionToolsTab extends CreativeTabs {
 	 * This is where the Tab Icon for whatever you would like
 	 * 
 	 */
-	//@Override
-	//public int getTabIconItemIndex() {
-		//return false;
+	@Override
+	public int getTabIconItemIndex() {
+		return Items.RawEssenceChunk.itemID;
 		
-	//}
+	}
 	
 	
 

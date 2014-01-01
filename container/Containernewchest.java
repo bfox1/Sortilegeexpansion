@@ -1,5 +1,6 @@
-package Sortilegeexpansion.blocks;
+package Sortilegeexpansion.container;
 
+import Sortilegeexpansion.blocks.chesttiny;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;

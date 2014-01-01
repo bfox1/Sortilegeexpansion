@@ -1,5 +1,6 @@
 package Sortilegeexpansion.blocks;
 
+import Sortilegeexpansion.items.Items;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -355,8 +356,7 @@ public class TileEntityDecayer extends TileEntity implements ISidedInventory{
     	}else{
     		int i = par0ItemStack.getItem().itemID;
     	
-    		if (i == Item.redstone.itemID) return 10;
-    		if (i == Block.blockRedstone.blockID) return 90;
+    		if(i == Items.RawEssenceChunk.itemID) return 25;
         	return 0;
     	}
 	}

@@ -1,5 +1,7 @@
-package Sortilegeexpansion.blocks;
+package Sortilegeexpansion.gui;
 
+import Sortilegeexpansion.blocks.TileEntityDecayer;
+import Sortilegeexpansion.container.ContainerDecayer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

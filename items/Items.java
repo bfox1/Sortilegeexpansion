@@ -1,5 +1,7 @@
 package Sortilegeexpansion.items;
 
+import Sortilegeexpansion.lib.config.Names;
+import Sortilegeexpansion.lib.config.ids;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -7,7 +9,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Items {
 		//Items
-	public static Item verbal;
+	public static Item RawEssenceChunk;
 	
 	
 
@@ -18,6 +20,7 @@ public class Items {
 	public static void init() {
 			//Items
 		//verbal = new Verbal(ids.verbal_actual);
+		RawEssenceChunk = new rawEssenceChunk(ids.rawessencechunk_actual);
 
 		
 			//LEAVE COMMENT BELOW ALONE	
@@ -36,6 +39,7 @@ public class Items {
 	public static void addNames() {
 			//Items
 		//LanguageRegistry.addName(verbal, Names.Verbal_name);
+		LanguageRegistry.addName(RawEssenceChunk, Names.rawessencechunk_name);
 
 		//DO NOT TOUCH THE COMMENT BELOW
 		/**

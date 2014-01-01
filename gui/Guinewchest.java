@@ -1,7 +1,9 @@
-package Sortilegeexpansion.blocks;
+package Sortilegeexpansion.gui;
 
 import org.lwjgl.opengl.GL11;
 
+import Sortilegeexpansion.blocks.chesttiny;
+import Sortilegeexpansion.container.Containernewchest;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;

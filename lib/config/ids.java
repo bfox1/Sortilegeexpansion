@@ -24,5 +24,7 @@ public class ids {
 	
 	//public static int verbal_actual;
 	//public static final int verbal_default = 16000;
+	public static int rawessencechunk_actual;
+	public static int rawessencechunk_default = 16000;
 	
 }

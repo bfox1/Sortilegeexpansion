@@ -1,7 +1,9 @@
-package Sortilegeexpansion.blocks;
+package Sortilegeexpansion.gui;
 
 import org.lwjgl.opengl.GL11;
 
+import Sortilegeexpansion.blocks.TileEntityDecayer;
+import Sortilegeexpansion.container.ContainerDecayer;
 import Sortilegeexpansion.lib.ModInfo;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;

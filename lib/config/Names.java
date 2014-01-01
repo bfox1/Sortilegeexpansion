@@ -9,6 +9,9 @@ public class Names {
 	//public static final String Verbal_unlocalizedName = "Verbal";
 	//public static final String Verbal_name = "Verbal";
 	
+	public static final String rawessencechunk_unlocalizedName = "RawEssenceChunk";
+	public static final String rawessencechunk_name = "Raw Essence Chunk";
+	
 		//Blocks
 	
 	public static final String Newchest_unlocalizedName = "NewChest";
