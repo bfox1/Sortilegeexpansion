@@ -1,5 +1,6 @@
 package Sortilegeexpansion.liquid;
 
+import Sortilegeexpansion.Sortilegeexpansion;
 import Sortilegeexpansion.lib.ModInfo;
 import Sortilegeexpansion.lib.config.Names;
 import cpw.mods.fml.relauncher.Side;
@@ -16,6 +17,7 @@ public class rawLiquidEssenceFlowing extends BlockFlowing {
 		this.blockHardness = 100.0F;
 		this.setLightOpacity(3);
 		this.setUnlocalizedName(Names.rawliquidessenceflowing_unlocalizedName);
+		this.setCreativeTab(Sortilegeexpansion.sortilegeexpansion);
 	}
 	
 	@Override
