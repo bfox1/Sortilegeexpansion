@@ -1,6 +1,6 @@
 package Sortilegeexpansion.container;
 
-import Sortilegeexpansion.blocks.chesttiny;
+import Sortilegeexpansion.blocks.TileEntityMiniChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -9,9 +9,9 @@ import net.minecraft.item.ItemStack;
 
 public class Containernewchest extends Container {
 
-    protected chesttiny tileEntity;
+    protected TileEntityMiniChest tileEntity;
 
-    public Containernewchest (InventoryPlayer inventoryPlayer, chesttiny te){
+    public Containernewchest (InventoryPlayer inventoryPlayer, TileEntityMiniChest te){
             tileEntity = te;
 
             //the Slot constructor takes the IInventory and the slot number in that it binds to

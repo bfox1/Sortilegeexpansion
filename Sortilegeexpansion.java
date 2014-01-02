@@ -5,6 +5,14 @@ import java.util.logging.Level;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSlab;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.liquids.LiquidContainerData;
+import net.minecraftforge.liquids.LiquidContainerRegistry;
+import net.minecraftforge.liquids.LiquidDictionary;
 import Sortilegeexpansion.oregen.Worldgenore;
 import Sortilegeexpansion.proxies.CommonProxy;
 import Sortilegeexpansion.gui.GuiHandler;
@@ -16,6 +24,7 @@ import Sortilegeexpansion.lib.ModInfo;
 import Sortilegeexpansion.lib.SortilegeexpansionToolsTab;
 import Sortilegeexpansion.lib.Sortilegeexpansiontab;
 import Sortilegeexpansion.lib.config.ConfigHandler;
+import Sortilegeexpansion.lib.config.Names;
 import Sortilegeexpansion.lib.config.Recipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -47,7 +56,6 @@ public class Sortilegeexpansion {
 	
 	public static GuiHandler guihandler = new GuiHandler();
 	
-	public static GuiHandlerdecayer guihandlerdecayer = new GuiHandlerdecayer();
 	
 	public static final int guiIdDecayer = 8;
 	public static final int guiIdminichest = 7;
@@ -81,6 +89,7 @@ public class Sortilegeexpansion {
 		LogHelper.log(Level.INFO, "Preparing Blocks, Items, Recipes");
 		// Loads items details BEFORE statup.
 		//NetworkRegistry.instance().registerGuiHandler(ModInfo.ID, guihandler);
+
 		Items.init();
 		Blocks.init();
 		Recipes.init();
@@ -97,6 +106,7 @@ public class Sortilegeexpansion {
 	// This happens DURING the startup
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
+		NetworkRegistry.instance().registerGuiHandler(ModInfo.ID, new GuiHandler());
 		LanguageRegistry.instance().addStringLocalization(
 				"itemGroup." + ModInfo.NAME, "en_US", ModInfo.NAME);
 		LanguageRegistry.instance().addStringLocalization(
@@ -110,7 +120,8 @@ public class Sortilegeexpansion {
 		//Oregeneration.regWorld();
 		GameRegistry.registerWorldGenerator(new Worldgenore());
 		NetworkRegistry.instance().registerGuiHandler(ModInfo.ID, new GuiHandler());
-		NetworkRegistry.instance().registerGuiHandler(ModInfo.ID, new GuiHandlerdecayer());
+
+
 
 
 

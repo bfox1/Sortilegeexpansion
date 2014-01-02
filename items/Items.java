@@ -5,12 +5,14 @@ import Sortilegeexpansion.lib.config.Names;
 import Sortilegeexpansion.lib.config.ids;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Items {
 		//Items
 	public static Item RawEssenceChunk;
+	
 
 	
 	
@@ -23,6 +25,7 @@ public class Items {
 			//Items
 		//verbal = new Verbal(ids.verbal_actual);
 		RawEssenceChunk = new rawEssenceChunk(ids.rawessencechunk_actual);
+
 
 
 		
@@ -43,6 +46,7 @@ public class Items {
 			//Items
 		//LanguageRegistry.addName(verbal, Names.Verbal_name);
 		LanguageRegistry.addName(RawEssenceChunk, Names.rawessencechunk_name);
+
 
 		//DO NOT TOUCH THE COMMENT BELOW
 		/**

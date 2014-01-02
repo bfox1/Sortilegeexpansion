@@ -3,6 +3,7 @@ package Sortilegeexpansion.blocks;
 import Sortilegeexpansion.Sortilegeexpansion;
 import Sortilegeexpansion.lib.config.Names;
 import Sortilegeexpansion.lib.config.ids;
+import Sortilegeexpansion.liquid.Fluid;
 import Sortilegeexpansion.liquid.rawLiquidEssenceFlowing;
 import Sortilegeexpansion.liquid.rawLiquidEssenceStill;
 import cpw.mods.fml.common.Mod.Instance;
@@ -36,6 +37,12 @@ public class Blocks {
 		//Liquid blocks
 	public static Block rawliquidessenceflowing;
 	public static Block rawliquidessencestill;
+	
+	public static Block rawliquidessence;
+	
+
+	
+
 
 	
 	public static void init() {
@@ -45,9 +52,9 @@ public class Blocks {
 		//GameRegistry.registerBlock(verbalblock, Names.Verbalblock_name);
 		
 		//Special containers
-		blockcontainer = new NewChest(ids.newchest_acutal);
+		blockcontainer = new MiniChest(ids.newchest_acutal);
 		GameRegistry.registerBlock(blockcontainer, Names.Newchest_name);
-		GameRegistry.registerTileEntity(chesttiny.class, "Containernewchest");
+		GameRegistry.registerTileEntity(TileEntityMiniChest.class, "Containernewchest");
 		
 		//decayer
 		blockDecayerIdle = new BlockDecayer(ids.blockDecayerIdle_actual, false).setUnlocalizedName(Names.blockDecayerIdle_name).setHardness(3.7F).setCreativeTab(Sortilegeexpansion.sortilegeexpansion);

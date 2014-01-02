@@ -17,10 +17,13 @@ public class ids {
 	public static final int blockDecayerActive_default = 3002;
 	
 	public static int rawliquidessenceflowing_actual;
-	public static int rawliquidessenceflowing_default = 3500;
+	public static final int rawliquidessenceflowing_default = 3500;
 	
 	public static int rawliquidessencestill_actual;
-	public static int rawliquidessencestill_default = 3501;
+	public static final int rawliquidessencestill_default = 3501;
+	
+	public static int rawliquidessence_actual;
+	public static final int rawliquidessence_default = 3502;
 	/**
 	 * Ids for Items range from 16000 - 36000 Ids for Blocks range from 0 - 4000
 	 * Verbalhoe has the highest Item id of 16010 12/21 {Update these if new IDS have been added}
@@ -31,9 +34,9 @@ public class ids {
 	//public static int verbal_actual;
 	//public static final int verbal_default = 16000;
 	public static int rawessencechunk_actual;
-	public static int rawessencechunk_default = 16000;
+	public static final int rawessencechunk_default = 16000;
 	public static int bucketrawessence_actual;
-	public static int bucketrawessene_default = 16500;
+	public static final int bucketrawessene_default = 16500;
 	
 
 	

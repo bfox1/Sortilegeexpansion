@@ -2,7 +2,7 @@ package Sortilegeexpansion.gui;
 
 import org.lwjgl.opengl.GL11;
 
-import Sortilegeexpansion.blocks.chesttiny;
+import Sortilegeexpansion.blocks.TileEntityMiniChest;
 import Sortilegeexpansion.container.Containernewchest;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -10,11 +10,11 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 
-public class Guinewchest extends GuiContainer {
+public class GuiMiniChest extends GuiContainer {
 	
 	public static final ResourceLocation texture = new ResourceLocation(Sortilegeexpansion.lib.ModInfo.ID.toLowerCase(), "/textures/gui/trap.png");
-    public Guinewchest (InventoryPlayer inventoryPlayer,
-            chesttiny tileEntity) {
+    public GuiMiniChest (InventoryPlayer inventoryPlayer,
+            TileEntityMiniChest tileEntity) {
     //the container is instanciated and passed to the superclass for handling
     super(new Containernewchest(inventoryPlayer, tileEntity));
     

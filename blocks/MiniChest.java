@@ -23,9 +23,9 @@ import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class NewChest extends BlockContainer {
+public class MiniChest extends BlockContainer {
 	
-		protected NewChest(int id){
+		protected MiniChest(int id){
 			super(id, Material.wood);
 			setHardness(2.0F);
 			setResistance(5.0F);
@@ -57,7 +57,7 @@ public class NewChest extends BlockContainer {
                         return false;
                 }
         //code to open gui explained later
-        player.openGui(Sortilegeexpansion.instance, 0, world, x, y, z);
+        player.openGui(Sortilegeexpansion.instance1, Sortilegeexpansion.guiIdminichest, world, x, y, z);
                 return true;
         }
     	private void setDefaultDirection(World world, int x, int y, int z){
@@ -130,7 +130,7 @@ public class NewChest extends BlockContainer {
 
         @Override
         public TileEntity createNewTileEntity(World world) {
-                return new chesttiny();
+                return new TileEntityMiniChest();
         }
         public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLivingBase, ItemStack itemstack){
     		int l = MathHelper.floor_double((double) (entityLivingBase.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;

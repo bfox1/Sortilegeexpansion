@@ -109,13 +109,6 @@ import net.minecraft.world.World;
 			}
 		}
 
-		//public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
-			//if(!world.isRemote) {
-				//player.openGui(Sortilegeexpansion.instance, Sortilegeexpansion.guiIdDecayer, world, x, y, z);
-			//}
-			
-			//return true;
-		//}
 		@Override
 		public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
 			if(!world.isRemote) {

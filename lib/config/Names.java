@@ -31,6 +31,9 @@ public class Names {
 	
 	public static final String rawliquidessencestill_unlocalizedName = "RawLiquidEssenceStill";
 	public static final String rawliquidessencestill_name = "Raw Liquid Essence";
+	
+	public static final String rawliquidessence_unlocalizedName = "RawLiquidEssence";
+	public static final String rawliquidesence_name = "Raw Liquid Essence";
 
 
 

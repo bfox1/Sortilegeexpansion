@@ -7,11 +7,11 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
-public class chesttiny extends TileEntity implements IInventory {
+public class TileEntityMiniChest extends TileEntity implements IInventory {
 	
 	private ItemStack[] inv;
 	
-	public chesttiny(){
+	public TileEntityMiniChest(){
 		inv = new ItemStack[9];
 	}
 
