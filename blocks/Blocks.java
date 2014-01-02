@@ -3,6 +3,8 @@ package Sortilegeexpansion.blocks;
 import Sortilegeexpansion.Sortilegeexpansion;
 import Sortilegeexpansion.lib.config.Names;
 import Sortilegeexpansion.lib.config.ids;
+import Sortilegeexpansion.liquid.rawLiquidEssenceFlowing;
+import Sortilegeexpansion.liquid.rawLiquidEssenceStill;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -30,6 +32,10 @@ public class Blocks {
 		//Decayer
 	public static Block blockDecayerIdle;
 	public static Block blockDecayerActive;
+	
+		//Liquid blocks
+	public static Block rawliquidessenceflowing;
+	public static Block rawliquidessencestill;
 
 	
 	public static void init() {
@@ -51,6 +57,11 @@ public class Blocks {
 		GameRegistry.registerTileEntity(TileEntityDecayer.class, "Decayer");
 		LanguageRegistry.instance().addStringLocalization("container.decayer", "Decayer");
 		
+		//Liquids
+		rawliquidessenceflowing = new rawLiquidEssenceFlowing(ids.rawliquidessenceflowing_actual);
+		rawliquidessencestill = new rawLiquidEssenceStill(ids.rawliquidessencestill_actual);
+		GameRegistry.registerBlock(rawliquidessenceflowing, Names.rawliquidessenceflowing_name);
+		GameRegistry.registerBlock(rawliquidessencestill, Names.rawliquidessencestill_name);
 
 		
 	}
@@ -60,6 +71,8 @@ public class Blocks {
 		//LanguageRegistry.addName((Block given name), ("Name of block"));
 		LanguageRegistry.addName(blockDecayerIdle, Names.blockDecayerActive_name);
 		LanguageRegistry.addName(blockDecayerIdle, Names.blockDecayerIdle_name);
+		LanguageRegistry.addName(rawliquidessenceflowing, Names.rawliquidessenceflowing_name);
+		LanguageRegistry.addName(rawliquidessencestill, Names.rawliquidessencestill_name);
 
 	}
 	

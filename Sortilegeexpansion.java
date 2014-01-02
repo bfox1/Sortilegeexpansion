@@ -42,12 +42,15 @@ public class Sortilegeexpansion {
 		//For guis
 	@Instance(ModInfo.ID)
 	public static Sortilegeexpansion instance = new Sortilegeexpansion();
+	@Instance(ModInfo.ID)
+	public static Sortilegeexpansion instance1 = new Sortilegeexpansion();
 	
 	public static GuiHandler guihandler = new GuiHandler();
 	
 	public static GuiHandlerdecayer guihandlerdecayer = new GuiHandlerdecayer();
 	
 	public static final int guiIdDecayer = 8;
+	public static final int guiIdminichest = 7;
 	
 	//@Instance(ModInfo.ID)
 	//public static Sortilegeexpansion instance1 = new Sortilegeexpansions();

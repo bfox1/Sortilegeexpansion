@@ -12,6 +12,9 @@ public class Names {
 	public static final String rawessencechunk_unlocalizedName = "RawEssenceChunk";
 	public static final String rawessencechunk_name = "Raw Essence Chunk";
 	
+	public static final String bucketrawessence_unlocalizedName = "BucketRawEssence";
+	public static final String bucketrawessence_name = "Bucket Raw Essence";
+	
 		//Blocks
 	
 	public static final String Newchest_unlocalizedName = "NewChest";
@@ -22,6 +25,13 @@ public class Names {
 	
 	public static final String blockDecayerActive_unlocalizedName = "DecayerActive";
 	public static final String blockDecayerActive_name = "Decayer ACTIVE";
+	
+	public static final String rawliquidessenceflowing_unlocalizedName = "RawLiquidEssenceFlowing";
+	public static final String rawliquidessenceflowing_name = "Raw Liquid Essence Flowing";
+	
+	public static final String rawliquidessencestill_unlocalizedName = "RawLiquidEssenceStill";
+	public static final String rawliquidessencestill_name = "Raw Liquid Essence";
+
 
 
 

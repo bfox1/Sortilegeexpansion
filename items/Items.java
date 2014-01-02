@@ -1,5 +1,6 @@
 package Sortilegeexpansion.items;
 
+import Sortilegeexpansion.blocks.Blocks;
 import Sortilegeexpansion.lib.config.Names;
 import Sortilegeexpansion.lib.config.ids;
 import net.minecraft.item.EnumToolMaterial;
@@ -10,6 +11,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class Items {
 		//Items
 	public static Item RawEssenceChunk;
+
 	
 	
 
@@ -21,6 +23,7 @@ public class Items {
 			//Items
 		//verbal = new Verbal(ids.verbal_actual);
 		RawEssenceChunk = new rawEssenceChunk(ids.rawessencechunk_actual);
+
 
 		
 			//LEAVE COMMENT BELOW ALONE	

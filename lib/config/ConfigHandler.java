@@ -41,6 +41,12 @@ public class ConfigHandler {
 		
 		ids.blockDecayerIdle_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.blockDecayerIdle_name, ids.blockDecayerIdle_default).getInt();
+		
+		ids.rawliquidessenceflowing_actual = config.getBlock(config.CATEGORY_BLOCK,
+				Names.rawliquidessenceflowing_name, ids.rawliquidessenceflowing_default).getInt();
+		
+		ids.rawliquidessencestill_actual = config.getBlock(config.CATEGORY_BLOCK,
+				Names.rawliquidessencestill_name, ids.rawliquidessencestill_default).getInt();
 		config.save();
 
 	}
