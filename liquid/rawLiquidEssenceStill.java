@@ -1,5 +1,6 @@
 package Sortilegeexpansion.liquid;
 
+import Sortilegeexpansion.Sortilegeexpansion;
 import Sortilegeexpansion.lib.ModInfo;
 import Sortilegeexpansion.lib.config.Names;
 import cpw.mods.fml.relauncher.Side;
@@ -17,7 +18,7 @@ public class rawLiquidEssenceStill extends BlockStationary {
 		this.blockHardness = 100.0F;
 		this.setLightOpacity(3);
 		this.disableStats();
-		this.setUnlocalizedName(Names.rawliquidessencestill_unlocalizedName);
+
 	}
 	
 	@Override

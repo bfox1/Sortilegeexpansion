@@ -1,9 +1,9 @@
 package Sortilegeexpansion.blocks;
 
 import Sortilegeexpansion.Sortilegeexpansion;
+import Sortilegeexpansion.lib.ModInfo;
 import Sortilegeexpansion.lib.config.Names;
 import Sortilegeexpansion.lib.config.ids;
-import Sortilegeexpansion.liquid.Fluid;
 import Sortilegeexpansion.liquid.rawLiquidEssenceFlowing;
 import Sortilegeexpansion.liquid.rawLiquidEssenceStill;
 import cpw.mods.fml.common.Mod.Instance;
@@ -11,11 +11,16 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFlowing;
+import net.minecraft.block.BlockFluid;
 import net.minecraft.block.BlockHalfSlab;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSlab;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 
 
 public class Blocks {
@@ -38,8 +43,13 @@ public class Blocks {
 	public static Block rawliquidessenceflowing;
 	public static Block rawliquidessencestill;
 	
-	public static Block rawliquidessence;
+	public static Block blockrawliquidessence;
 	
+	public static Material materialrawliquidessence;
+	
+	public static Fluid fluidrawliquidessence;
+	
+
 
 	
 
@@ -65,11 +75,21 @@ public class Blocks {
 		LanguageRegistry.instance().addStringLocalization("container.decayer", "Decayer");
 		
 		//Liquids
-		rawliquidessenceflowing = new rawLiquidEssenceFlowing(ids.rawliquidessenceflowing_actual);
-		rawliquidessencestill = new rawLiquidEssenceStill(ids.rawliquidessencestill_actual);
+		rawliquidessenceflowing = new rawLiquidEssenceFlowing(ids.rawliquidessenceflowing_actual).setUnlocalizedName(Names.rawliquidessenceflowing_unlocalizedName).setCreativeTab(Sortilegeexpansion.sortilegeexpansion);
+		rawliquidessencestill = new rawLiquidEssenceStill(ids.rawliquidessencestill_actual).setUnlocalizedName(Names.rawliquidessencestill_unlocalizedName);
 		GameRegistry.registerBlock(rawliquidessenceflowing, Names.rawliquidessenceflowing_name);
 		GameRegistry.registerBlock(rawliquidessencestill, Names.rawliquidessencestill_name);
-
+		
+		fluidrawliquidessence = new Fluid("fluid").setBlockID(ids.rawliquidessence_actual);
+		FluidRegistry.registerFluid(fluidrawliquidessence);
+		
+		//Material
+		//materialrawliquidessence = new Material(MapColor.grassColor);
+		
+		
+		//Liquid Blocks
+		//blockrawliquidessence = new BlockRawLiquidEssence(ids.rawliquidessence_actual).setUnlocalizedName(Names.rawliquidessence_unlocalizedName).setTextureName(ModInfo.ID.toLowerCase() + ":" + "raw_liquid_essence");
+		//GameRegistry.registerBlock(blockrawliquidessence, Names.rawliquidesence_name);
 		
 	}
 
@@ -80,6 +100,7 @@ public class Blocks {
 		LanguageRegistry.addName(blockDecayerIdle, Names.blockDecayerIdle_name);
 		LanguageRegistry.addName(rawliquidessenceflowing, Names.rawliquidessenceflowing_name);
 		LanguageRegistry.addName(rawliquidessencestill, Names.rawliquidessencestill_name);
+		//LanguageRegistry.addName(blockrawliquidessence, Names.rawliquidesence_name);
 
 	}
 	

@@ -16,8 +16,7 @@ public class rawLiquidEssenceFlowing extends BlockFlowing {
 		super(id, Material.water);
 		this.blockHardness = 100.0F;
 		this.setLightOpacity(3);
-		this.setUnlocalizedName(Names.rawliquidessenceflowing_unlocalizedName);
-		this.setCreativeTab(Sortilegeexpansion.sortilegeexpansion);
+
 	}
 	
 	@Override

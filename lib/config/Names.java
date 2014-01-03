@@ -34,6 +34,37 @@ public class Names {
 	
 	public static final String rawliquidessence_unlocalizedName = "RawLiquidEssence";
 	public static final String rawliquidesence_name = "Raw Liquid Essence";
+	
+	
+	public static final String decayedironingot_UnlocalizedName = "Decayed_Iron_Ingot";
+	public static final String decayedironingot_name = "Decayed Iron Ingot";
+	
+	public static final String decayedgoldingot_UnlocalizedName = "Decayed_Gold_Ingot";
+	public static final String decayedgoldingot_name = "Decayed Gold Ingot";
+	
+	public static final String decayedcoalchunk_UnlocalizedName = "Decayed_Coal_Chunk";
+	public static final String decayedcoalchunk_name = "Decayed Coal Chunk";
+	
+	public static final String decayedlapischunk_UnlocalizedName = "Decayed_Lapis_Chunk";
+	public static final String decayedlapischunk_name = "Decayed Lapis Chunk";
+	
+	public static final String decayeddiamondchunk_UnlocalizedName = "Decayed_Diamond_Chunk";
+	public static final String decayeddiamondchunk_name = "Decayed Diamond Chunk";
+	
+	public static final String decayedcopperingot_UnlocalizedName = "Decayed_Copper_Ingot";
+	public static final String decayedcopperingot_name = "Decayed Copper Ingot";
+	
+	public static final String decayedtiningot_UnlocalizedName = "Decayed_Tin_Ingot";
+	public static final String decayedtiningot_name = "Decayed Tin Ingot";
+	
+	public static final String decayedsilveringot_UnlocalizedName = "Decayed_Silver_Ingot";
+	public static final String decayedsilveringot_name = "Decayed Silver Ingot";
+	
+	public static final String decayedleadingot_UnlocalizedName = "Decayed_Lead_Ingot";
+	public static final String decayedleadingot_name = "Decayed Lead Ingot";
+	
+	public static final String lambentessence_UnlocalizedName = "Lambent_Essence";
+	public static final String lambentessence_name = "Lambent Essence";
 
 
 

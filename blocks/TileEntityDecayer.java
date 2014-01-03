@@ -19,11 +19,12 @@ public class TileEntityDecayer extends TileEntity implements ISidedInventory{
 	private static final int[] slots_top = new int[] {0};
 	private static final int[] slots_bottom = new int[] {2, 1};
 	private static final int[] slots_sides = new int[] {1};
+	private static final int[] slots_side = new int[] {3};
 
 	/**
 	* The ItemStacks that hold the items currently being used in the furnace
 	*/
-	private ItemStack[] slots = new ItemStack[3];
+	private ItemStack[] slots = new ItemStack[4];
 
 	/** the speed of this furnace, 200 is normal / how many ticks it takes : 30 ticks = 1 second */
 	public int maceratingSpeed = 100;
@@ -109,6 +110,7 @@ public class TileEntityDecayer extends TileEntity implements ISidedInventory{
 	public void setInventorySlotContents(int par1, ItemStack par2ItemStack)
 	{
     	this.slots[par1] = par2ItemStack;
+
 
     	if (par2ItemStack != null && par2ItemStack.stackSize > this.getInventoryStackLimit())
     	{
@@ -313,12 +315,12 @@ public class TileEntityDecayer extends TileEntity implements ISidedInventory{
     	if (this.slots[0] == null){
         	return false;
     	}else{
-        		ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
+        		ItemStack itemstack = DecayerRecipes.smelting().getSmeltingResult(this.slots[0]);
         		if(itemstack == null) return false;
         		if(!isOre(this.slots[0])) return false;
         		if(this.slots[2] == null) return true;
         		if(!this.slots[2].isItemEqual(itemstack)) return false;
-        		int result = slots[2].stackSize + (itemstack.stackSize*2);
+        		int result = slots[2].stackSize + (itemstack.stackSize);
         		return (result <= getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
     	}
 	}
@@ -328,13 +330,13 @@ public class TileEntityDecayer extends TileEntity implements ISidedInventory{
  	*/
 	public void smeltItem(){
     	if(this.canSmelt()){
-        	ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
+        	ItemStack itemstack = DecayerRecipes.smelting().getSmeltingResult(this.slots[0]);
         
         	if(this.slots[2] == null){
             	this.slots[2] = itemstack.copy();
-            	this.slots[2].stackSize*=2;
+            	this.slots[2].stackSize =2;
         	}else if (this.slots[2].isItemEqual(itemstack)){
-            	slots[2].stackSize += (itemstack.stackSize*2);
+            	slots[2].stackSize += (itemstack.stackSize);
         	}
 
         	--this.slots[0].stackSize;
@@ -415,4 +417,8 @@ public class TileEntityDecayer extends TileEntity implements ISidedInventory{
 	{
    	 		return par3 != 0 || par1 != 1 || par2ItemStack.itemID == Item.bucketEmpty.itemID;
 	}
+
+
+
+
 }
