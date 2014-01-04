@@ -1,5 +1,6 @@
 package Sortilegeexpansion.container;
 
+import Sortilegeexpansion.blocks.DecayerRecipes;
 import Sortilegeexpansion.blocks.TileEntityDecayer;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -25,6 +26,8 @@ public class ContainerDecayer extends Container
 		this.addSlotToContainer(new Slot(par2TileEntityFurnace, 0, 56, 35));
 		this.addSlotToContainer(new Slot(par2TileEntityFurnace, 1, 8, 56));
 		this.addSlotToContainer(new SlotFurnace(par1InventoryPlayer.player, par2TileEntityFurnace, 2, 116, 35));
+		this.addSlotToContainer(new SlotFurnace(par1InventoryPlayer.player, par2TileEntityFurnace, 3, 116, 13));
+		this.addSlotToContainer(new SlotFurnace(par1InventoryPlayer.player, par2TileEntityFurnace, 4, 116, 57));
 		int i;
 
 		for (i = 0; i < 3; ++i)
@@ -117,7 +120,7 @@ public class ContainerDecayer extends Container
 			}
 			else if (par2 != 1 && par2 != 0)
 			{
-				if (FurnaceRecipes.smelting().getSmeltingResult(itemstack1) != null)
+				if (DecayerRecipes.smelting().getSmeltingResult(itemstack1) != null)
 				{
 					if (!this.mergeItemStack(itemstack1, 0, 1, false))
 					{
