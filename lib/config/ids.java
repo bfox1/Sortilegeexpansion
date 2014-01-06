@@ -64,7 +64,11 @@ public class ids {
 	public static final int decayedleadingot_default = 16009;
 	
 	public static int lambentessence_actual;
+
 	public static final int lambentessence_default = 16010;
+	
+	public static int recordmusic_actual;
+	public static final int recordmusic_default = 16011;
 	
 
 	

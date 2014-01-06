@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBucket;
+import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -26,6 +27,7 @@ public class Items {
 	public static Item decayedsilveringot;
 	public static Item decayedleadingot;
 	public static Item lambentessence;
+	public static Item recordmusic;
 	
 
 	
@@ -49,6 +51,7 @@ public class Items {
 		decayedsilveringot = new DecayedSilverIngot(ids.decayedsilveringot_actual);
 		decayedleadingot = new DecayedLeadIngot(ids.decayedleadingot_actual);
 		lambentessence = new LambentEssence(ids.lambentessence_actual);
+		recordmusic = new recordclass(ids.recordmusic_actual, "Wakemeup").setUnlocalizedName("record").setTextureName("record_stal");
 
 
 
